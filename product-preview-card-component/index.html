@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Product preview card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="product-card">
+        <picture class="product-card-picture">
+          <source
+            srcset="./images/image-product-desktop.jpg"
+            media="(min-width: 586px)"
+          />
+          <img
+            class="product-card-picture__img"
+            srcset="./images/image-product-mobile.jpg"
+            alt="perfume image"
+          />
+        </picture>
+
+        <div class="product-card-body">
+          <div class="product-card-content">
+            <span class="product-card-content__type">PERFUME</span>
+            <h3 class="product-card-content__item">
+              Gabrielle Essence Eau De Parfum
+            </h3>
+            <p class="product-card-content__description">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfumer-Creator for the House of CHANEL.
+            </p>
+          </div>
+
+          <div class="product-card-footer">
+            <div class="product-card-prices">
+              <h5 class="product-card-prices__current">$149.99</h5>
+              <span class="product-card-prices__previous">$169.99</span>
+            </div>
+
+            <button class="product-card-cta-button">
+              <object
+                type="image/svg+xml"
+                data="./images//icon-cart.svg"
+                aria-label="cart icon"
+              ></object>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/zake-dev">Jeonghwan Lee (Zake)</a>.
+      </div>
+    </footer>
+  </body>
+</html>
