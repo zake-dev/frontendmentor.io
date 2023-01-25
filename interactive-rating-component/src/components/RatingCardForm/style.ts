@@ -86,3 +86,21 @@ export const SubmitButton = styled.button`
     cursor: default;
   }
 `;
+
+export const ResultCard = styled(Card)`
+  padding: 32px 18px;
+  align-items: center;
+  text-align: center;
+`;
+
+export const ResultIllustWrapper = styled.div`
+  position: relative;
+`;
+
+export const RatingScoreChip = styled.span`
+  margin: 12px 0;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background-color: ${colors.darkBlue};
+  color: ${colors.orange};
+`;
