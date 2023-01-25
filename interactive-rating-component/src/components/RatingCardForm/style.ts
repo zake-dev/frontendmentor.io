@@ -50,13 +50,15 @@ export const RatingScoreButton = styled.button<{ active?: boolean }>`
   border-radius: 50%;
   background-color: ${({ active }) =>
     active ? colors.mediumGrey : colors.darkBlue};
-  color: ${colors.mediumGrey};
+  color: ${({ active }) => (active ? colors.white : colors.mediumGrey)};
   cursor: pointer;
   transition: all 0.2s ease;
 
-  &:hover {
-    background-color: ${colors.orange};
-    color: ${colors.white};
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${colors.orange};
+      color: ${colors.white};
+    }
   }
 
   &:active {
@@ -75,9 +77,11 @@ export const SubmitButton = styled.button`
   cursor: pointer;
   transition: all 0.2s ease;
 
-  &:hover {
-    background-color: ${colors.white};
-    color: ${colors.orange};
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${colors.white};
+      color: ${colors.orange};
+    }
   }
 
   &:disabled {

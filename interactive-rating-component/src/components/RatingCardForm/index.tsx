@@ -19,7 +19,16 @@ import {
 } from './style';
 
 function RatingCardForm() {
+  const [ratingScore, setRatingScore] = useState<number | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const onSelectRatingScore = (score: number) => {
+    setRatingScore(() => score);
+  };
+
+  const onSubmit = () => {
+    setIsSubmitted(true);
+  };
 
   if (isSubmitted)
     return (
@@ -29,7 +38,7 @@ function RatingCardForm() {
           <ScreenReaderOnly description="Illustration of a receipt printed out from a mobile phone screen." />
         </ResultIllustWrapper>
 
-        <RatingScoreChip>You selected {4} out of 5</RatingScoreChip>
+        <RatingScoreChip>You selected {ratingScore} out of 5</RatingScoreChip>
 
         <Title>Thank you!</Title>
         <Description>
@@ -54,11 +63,19 @@ function RatingCardForm() {
 
       <RatingScoreButtonsContainer>
         {[1, 2, 3, 4, 5].map((score) => (
-          <RatingScoreButton key={score}>{score}</RatingScoreButton>
+          <RatingScoreButton
+            key={score}
+            onClick={() => onSelectRatingScore(score)}
+            active={score === ratingScore}
+          >
+            {score}
+          </RatingScoreButton>
         ))}
       </RatingScoreButtonsContainer>
 
-      <SubmitButton>SUBMIT</SubmitButton>
+      <SubmitButton onClick={onSubmit} disabled={ratingScore === null}>
+        SUBMIT
+      </SubmitButton>
     </Card>
   );
 }
