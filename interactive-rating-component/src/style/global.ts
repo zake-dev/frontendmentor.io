@@ -12,9 +12,8 @@ const GlobalStyle = styled.createGlobalStyle`
   }
 
   :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
     font-weight: 400;
 
     font-synthesis: none;
@@ -28,8 +27,14 @@ const GlobalStyle = styled.createGlobalStyle`
     color: black;
     text-decoration: inherit;
   }
+
   a:hover {
     color: black;
+  }
+
+  button {
+    font-family: 'Overpass', sans-serif;
+    border: none;
   }
 
   body,
