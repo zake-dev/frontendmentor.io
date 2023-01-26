@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img
+            class="card__image"
+            src="./images/image-equilibrium.jpg"
+            alt="An NFT image of equilibrium. Colorful 6-sided cube is floating with its corner."
+          />
+          <div class="card__image--hover">
+            <div class="card__image-backdrop"></div>
+            <img
+              class="card__icon card__icon--large"
+              src="./images/icon-view.svg"
+              alt="An icon of opened eye."
+            />
+          </div>
+        </div>
+        <h1
+          class="card__text card__text--title card__text--white card__text--hover"
+        >
+          Equilibrium #3429
+        </h1>
+        <p class="card__text">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+
+        <div class="row justify-content-between w-100">
+          <div class="row">
+            <img
+              class="card__icon"
+              src="./images/icon-ethereum.svg"
+              alt="An icon of ethereum symbol. Cyan colored diamond."
+            />
+            <span class="card__text card__text--cyan">0.041ETH</span>
+          </div>
+          <div class="row">
+            <img
+              class="card__icon"
+              src="./images/icon-clock.svg"
+              alt="An icon of clock."
+            />
+            <span class="card__text">3 days left</span>
+          </div>
+        </div>
+
+        <div class="horizontal-divider"></div>
+
+        <div class="row">
+          <img
+            class="card__avatar-image"
+            src="./images/image-avatar.png"
+            alt="A photograph of the author"
+          />
+          <p class="card__text">
+            Creation of
+            <span class="card__text--white card__text--hover"
+              >Jules Wyvern</span
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

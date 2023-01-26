@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Outfit";
+  font-size: 15px;
+  font-weight: 400;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 320px;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--very-dark-blue-card);
+  box-shadow: 0px 16px 80px rgb(0 0 0 / 20%);
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 320px;
+  border-radius: 16px;
+}
+
+.card__image {
+  width: 270px;
+  height: 270px;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.card__image--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 270px;
+  opacity: 0.5;
+  background-color: var(--cyan);
+  border-radius: 8px;
+}
+
+@media (hover: hover) {
+  .card__image--hover {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .card__image--hover:hover {
+    opacity: 1;
+  }
+}
+
+.card__text {
+  line-height: 24px;
+  color: var(--soft-blue);
+}
+
+.card__text--title {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+.card__text--bold {
+  font-weight: 700;
+}
+
+.card__text--cyan {
+  color: var(--cyan);
+}
+
+.card__text--white {
+  color: var(--white);
+}
+
+@media (hover: hover) {
+  .card__text--hover {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .card__text--hover:hover {
+    color: var(--cyan);
+  }
+}
+
+.card__icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.card__icon--large {
+  margin: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 1;
+}
+
+.card__avatar-image {
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.horizontal-divider {
+  width: 100%;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
